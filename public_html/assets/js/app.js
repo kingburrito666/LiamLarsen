@@ -1,11 +1,5 @@
 var page = 'home';
 
-// If we are using ajax to load things, the length of the page will go from
-// not overflowing to overflowing when transitioning between the home page and
-// other pages. This will trigger the appearence of the scroll bar, but then
-// that'll shift everything over horizontally, making things a little jarring.
-// So instead, always show the scroll bar if we'll be using ajax (i.e. if JS
-// is enabled)
 $('body').css('overflow-y', 'scroll');
 
 $('.center-card .nav a').mouseenter(function() {
@@ -230,7 +224,7 @@ $(window).resize(function() {
         // adjust #content's height to match its visible child div
         // $('#content').css('height', $('#'+page+'-page').height() + 'px');
     }
-})
+});
 
 $('.nav-link').click(function() {
     if(this.getAttribute('data-target') !== 'blog') {
