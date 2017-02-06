@@ -1,10 +1,10 @@
-/* 
+/*
     Created on : Feb 5, 2017, 6:10:41 PM
     Author     : liamlarsen
 */
 body {
     font-family: "Lato", sans-serif;
-    
+
 }
 
 /* the quote used in creation page */
@@ -247,10 +247,10 @@ body {
   }
 }
 .nav.top a.selected:hover::before {
-  border-color: grey;
+  border-color: #BC3434;
 }
 .nav.top a.selected {
-  background-color: grey;
+  background-color: #BC3434;
   color: white;
 }
 .nav.top a::after {
@@ -265,18 +265,18 @@ body {
   -webkit-transition: border-top 0.25s ease-in-out;
   transition: border-top 0.25s ease-in-out;
   top: 100%;
-  left: calc( 50% - 8px );
+  left: calc( 50% - 8px);
   position: absolute;
 }
 .nav.top a.selected::after {
-  border-top: 8px solid grey;
+  border-top: 8px solid #BC3434;
 }
 .nav.top a.selected:hover {
-  background-color: grey;
+  background-color: #BC3434;
 }
 @media (min-width: 750px) {
   .nav.top a.selected:not(:active):hover {
-    animation: wiggle 1.25s ease 0.5s 1 forwards;
+    animation: wiggle 0.45s ease 0s 1 forwards;
   }
 }
 .nav.top:not(.hidden) {
@@ -287,7 +287,7 @@ body {
     animation: navbar-move-in 0s 0s 1 forwards;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   .nav.top:not(.hidden) {
     animation: navbar-move-in 1s ease-out 0.5s 1 forwards;
   }
@@ -343,26 +343,18 @@ body {
 }
 @keyframes wiggle {
   0% {
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   25% {
-    -moz-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
   }
   75% {
-    -moz-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
   }
   100% {
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
@@ -516,20 +508,20 @@ body.on-content .backgrounds {
 }
 @media (min-width: 750px) {
   .backgrounds div {
-    -moz-transition: opacity 0.75s ease-in-out, -moz-transform 1s ease-in-out;
-    -o-transition: opacity 0.75s ease-in-out, -o-transform 1s ease-in-out;
-    -webkit-transition: opacity 0.75s ease-in-out, -webkit-transform 1s ease-in-out;
-    transition: opacity 0.75s ease-in-out, transform 1s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out, -moz-transform 1s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out, -o-transform 1s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out, -webkit-transform 1s ease-in-out;
+    transition: opacity 0.6s ease-in-out, transform 1s ease-in-out;
   }
 }
 .backgrounds #software-background {
-  background: url(/assets/img/programming.gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) center center no-repeat;
+  background: url(/assets/img/programming.gif) center center no-repeat;
 }
 .backgrounds #create-background {
   background: url(/assets/img/create.gif) center center no-repeat;
 }
 .backgrounds #paper-background {
-  background: url(/img/paper.jpg) center center no-repeat;
+  background: url(/assets/img/paper.jpg) center center no-repeat;
 }
 .backgrounds #blog-background {
   background: url(/assets/img/blog.jpg) center center no-repeat;
@@ -718,6 +710,11 @@ body.on-content .backgrounds {
   -webkit-transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+.center-card .headshot {
+  margin-bottom: 1.5em;
+  position: relative;
+
+}
 .center-card .title-text {
   padding-bottom: 1.5em;
   position: relative;
@@ -740,7 +737,7 @@ body.on-content .backgrounds {
 }
 @media (min-width: 750px) {
   .center-card.transition .headshot {
-      animation: move-out 0.5s ease-in 0.2s 1 forwards;
+      animation: move-out 0.5s ease-in 0s 1 forwards;
   }
   .center-card.transition .title-text {
     animation: move-out 0.5s ease-in 0s 1 forwards;
@@ -751,6 +748,14 @@ body.on-content .backgrounds {
   .center-card.transition .nav {
     animation: move-out 0.5s ease-in 0.1s 1 forwards;
   }
+  .center-card.return .headshot {
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+    animation: move-in 0.5s ease-out 0s 1 forwards;
+  }
   .center-card.return .title-text {
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
@@ -759,7 +764,7 @@ body.on-content .backgrounds {
     opacity: 0;
     animation: move-in 0.5s ease-out 0s 1 forwards;
   }
-  .center-card.return .about {
+  .center-card.return .AbtM {
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -869,7 +874,7 @@ body.on-content .backgrounds {
   padding-top: 0;
   padding-bottom: 0.5em;
 }
-.timeline li .year {
+.timeline li .time {
   position: absolute;
   background: #fff;
   padding: 0.25em 1em 0.25em 1em;
@@ -881,14 +886,14 @@ body.on-content .backgrounds {
   left: 20px;
 }
 @media (min-width: 750px) {
-    .timeline li .bubble {
+    .timeline li .time {
     top: calc(50% - 0.75em);
     right: calc(100% - 10em);
     left: auto;
     margin-right: 20px;
   }
 }
-.timeline li .bubble::before, .timeline li .year::after {
+.timeline li .time::before, .timeline li .time::after {
   position: absolute;
   width: 0;
   height: 0;
@@ -896,31 +901,31 @@ body.on-content .backgrounds {
   right: 100%;
 }
 @media (min-width: 750px) {
-    .timeline li .bubble::before, .timeline li .year::after {
+    .timeline li .time::before, .timeline li .time::after {
     left: 100%;
     right: auto;
   }
 }
-.timeline li .year::before {
+.timeline li .time::before {
   top: calc(50% - 11px);
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
   border-right: 11px solid #aaa;
 }
 @media (min-width: 750px) {
-    .timeline li .year::before {
+    .timeline li .time::before {
     border-right: none;
     border-left: 11px solid #aaa;
   }
 }
-.timeline li .year::after {
+.timeline li .time::after {
   top: calc(50% - 10px);
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-right: 10px solid #fff;
 }
 @media (min-width: 750px) {
-    .timeline li .year::after {
+    .timeline li .time::after {
     border-right: none;
     border-left: 10px solid #fff;
   }
@@ -982,36 +987,29 @@ body.on-content .backgrounds {
   *zoom: 1;
 }
 @media (max-width: 767px) {
-  /* line 1, ../sass/partials/_project_card.scss */
   .project-card {
     width: 100%;
   }
 }
-/* line 13, ../sass/partials/_project_card.scss */
 .project-card .logo {
   display: block;
   width: 30%;
   float: left;
 }
-/* line 18, ../sass/partials/_project_card.scss */
 .project-card .logo img {
   width: 100%;
 }
-/* line 21, ../sass/partials/_project_card.scss */
 .project-card .info {
   width: 70%;
   float: right;
   padding-left: 1em;
 }
-/* line 26, ../sass/partials/_project_card.scss */
 .project-card .info h3 {
   padding: 0;
 }
-/* line 30, ../sass/partials/_project_card.scss */
 .project-card .at-a-glance-push {
   height: 2em;
 }
-/* line 36, ../sass/partials/_project_card.scss */
 .project-card .at-a-glance {
   border-top: 1px dashed #ddd;
   border-bottom: 1px dashed #ddd;
@@ -1021,7 +1019,6 @@ body.on-content .backgrounds {
   left: calc( 30% + 1.4em );
   right: 1em;
 }
-/* line 49, ../sass/partials/_project_card.scss */
 .project-card .dates {
   position: absolute;
   right: 0;
@@ -1033,7 +1030,6 @@ body.on-content .backgrounds {
   font-size: 80%;
   background: #fff;
 }
-/* line 61, ../sass/partials/_project_card.scss */
 .project-card .dates::after {
   content: ' ';
   position: absolute;
@@ -1047,7 +1043,6 @@ body.on-content .backgrounds {
   background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #ffffff);
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
 }
-/* line 71, ../sass/partials/_project_card.scss */
 .project-card .technologies {
   position: absolute;
   left: 0;
@@ -1060,7 +1055,6 @@ body.on-content .backgrounds {
   white-space: nowrap;
   max-width: calc( 100% - 1em );
 }
-/* line 83, ../sass/partials/_project_card.scss */
 .project-card .technologies li {
   display: inline-block;
   height: 1.5em;
@@ -1071,11 +1065,9 @@ body.on-content .backgrounds {
   border-radius: 2px;
   font-size: 80%;
 }
-/* line 92, ../sass/partials/_project_card.scss */
 .project-card .technologies li img {
   height: 100%;
 }
-/* line 96, ../sass/partials/_project_card.scss */
 .project-card .technologies li span {
   position: relative;
   top: -0.2em;
