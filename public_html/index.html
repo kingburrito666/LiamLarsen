@@ -4,11 +4,92 @@
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Liam Larsen</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <div>TODO write content</div>
+    <!--/sub-index/create.html-->
+    <body class="on-home">
+        <div class="content-container" style="display:none">
+            <div class="wrapper">
+                <div class="nav top hidden">
+                    <a class="nav-link" data-type="create" href="partials/create.html">Creations</a>
+                    <a class="nav-link" data-type="software" href="partials/software.html">Software</a>
+                    <a class="nav-link" data-type="hardware" href="partials/hardware.html">Hardware</a>
+                    <a class="nav-link" data-type="papers" href="partials/papers.html">Papers</a>
+                    <a class="nav-link" data-type="blog" href="#">Blog</a>
+                </div>
+                
+                <div class="banner hidden">
+                    <div class="content" style='display: inline-block'>
+                        <h1>
+                            I like
+                            <em id="software-action">programming</em>
+                            <em id="hardware-action">hardware</em>
+                            <em id="create-action">creating things</em>
+                            <em id="paper-action">science</em>
+                        </h1>
+                        
+                        <div class="desc">
+                        <p id="software-desc">Programming in <b>Java</b>, and <b>PHP</b> are my specialties.</p>
+                        <p id="hardware-desc">Arduino, Pi, Edison. If you know it, I work with it.</p>
+                        <p id="create-desc"><em>"Each human is an infinite possibility of creation"</em></p>
+                        <p id="papers-desc">Expressing scientific research through the method used to create it</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="loading-spinner"></div>
+                </div>
+                <div class="push"></div>
+                
+            </div><!-- .wrapper -->
+        </div> <!-- .content-container -->
+        <div class="home-page-container">
+            
+            <div class="wrapper">
+                
+                <div class="center-container">
+                    
+                    <div class="center-card">
+                        <img class="headshot" src="assets/img/HeadshotHeader-2.jpg" alt="image" style="width:200px;height:300px;">
+                        <h1 class="title-text">I'm Liam Larsen</h1>
+                        <div class ="AbtM">
+                            I am a 15 year old <em>creator</em> and <em>programmer</em> from Los Angeles.  
+                        </div>
+                        <div class="nav in-body">
+                            <a class="nav-link" data-type="create" href="partials/create.html">Creations</a>
+                            <a class="nav-link" data-type="software" href="partials/software.html">Software</a>
+                            <a class="nav-link" data-type="hardware" href="partials/hardware.html">Hardware</a>
+                            <a class="nav-link" data-type="papers" href="partials/papers.html">Papers</a>
+                            <a class="nav-link" data-type="blog" href="#">Blog</a>
+                        </div>
+                    </div>
+                    
+                </div><!-- .content-container -->
+                
+                <div class="push"></div>
+                
+            </div><!-- .wrapper -->
+            
+            <div class="footer">
+                <a href="https://github.com/kingburrito666"><i class="fa fa-github-square"></i></a>
+                <a href="https://www.youtube.com/channel/UCwB8WJWTslJpSi0jjodsPkg"><i class="fa fa-youtube-square"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100010129533741"><i class="fa fa-facebook-square"></i></a>
+            </div>
+        </div><!-- .home-page-container -->
+        <div class="backgrounds">
+            <div class="overlay"></div>
+            <div id="software-background"></div>
+            <div id="hardware-background"></div>
+            <div id="create-background"></div>
+            <div id="paper-background"></div>
+            <div id="blog-background"></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="assets/js/app.js"></script>
     </body>
 </html>
