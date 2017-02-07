@@ -173,7 +173,7 @@ function loadPage(nextPage) {
             var newPageDiv = $('<div>', {id: nextPage+'-page', class: 'page'}).hide();
             $('#content').append(newPageDiv);
             $('#content .loading-spinner').addClass('show');
-            newPageDiv.load('/partials/'+nextPage+'.html', function() {
+            newPageDiv.load('/sub-index/'+nextPage+'.html', function() {
                 $('#content .loading-spinner').removeClass('show');
                 // Wait until the previous page fades out (if we're on a
                 // fast connection and this page loaded before the other
