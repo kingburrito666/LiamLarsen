@@ -352,21 +352,18 @@ body {
     transform: rotate(0deg);
   }
   25% {
-    -webkit-transform: rotate(-30deg);
-    transform: rotate(-30deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
   75% {
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 }
-
-
-
 .footer {
   text-align: center;
   font-size: 1.25em;
