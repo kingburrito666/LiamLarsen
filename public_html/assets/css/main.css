@@ -189,7 +189,24 @@ body {
   padding: 0.5em;
   position: relative;
 }
-
+.section .aboutPage {
+  text-align: center;
+}
+.section .aboutPage li {
+  width: 49%;
+  padding: 1em;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.section .aboutPage li p {
+  margin-top: 10px;
+}
+.section .aboutPage p {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 1em;
+}
 .nav {
   text-align: center;
   font-weight: 300;
@@ -590,6 +607,9 @@ body.on-content .backgrounds {
   -o-transition: -o-transform 0.15s linear;
   -webkit-transition: -webkit-transform 0.15s linear;
   transition: transform 0.15s linear;
+}
+.banner .content h1 em.aboutme {
+  font-size: 0.5em;
 }
 .banner .content h1 em.exiting {
   -moz-transform: rotateX(90deg);
