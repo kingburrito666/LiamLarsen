@@ -1,8 +1,9 @@
-# LiamLarsen #
+### Liam Larsen ###
 
 Personal website
 
-This was just a project to get familiar with web development. 
-Maybe I will continue it again one day. 
+This project is back on.
 
-haha...
+[View Here](src-code.simons-rock.edu/~llarsen17)
+
+
