@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg9538"
+   version="1.1"
+   viewBox="0 0 101.6 101.6"
+   height="4in"
+   width="4in">
+  <defs
+     id="defs9532">
+    <filter
+       id="filter11055"
+       style="color-interpolation-filters:sRGB;">
+      <feFlood
+         id="feFlood11045"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.498039" />
+      <feComposite
+         id="feComposite11047"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur11049"
+         result="blur"
+         stdDeviation="1.4"
+         in="composite1" />
+      <feOffset
+         id="feOffset11051"
+         result="offset"
+         dy="1.8"
+         dx="-0.3" />
+      <feComposite
+         id="feComposite11053"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+    <filter
+       id="filter11214"
+       style="color-interpolation-filters:sRGB;">
+      <feFlood
+         id="feFlood11204"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity="0.498039" />
+      <feComposite
+         id="feComposite11206"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur11208"
+         result="blur"
+         stdDeviation="1.4"
+         in="composite1" />
+      <feOffset
+         id="feOffset11210"
+         result="offset"
+         dy="2"
+         dx="-0.5" />
+      <feComposite
+         id="feComposite11212"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata9535">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-195.39999)"
+     id="layer1" />
+  <g
+     id="layer6">
+    <g
+       id="g858">
+      <path
+         id="path10104"
+         d="M 101.29515,246.21878 A 50.24667,50.24667 0 0 1 51.048477,296.46545 50.24667,50.24667 0 0 1 0.8018074,246.21878 50.24667,50.24667 0 0 1 51.048477,195.97211 50.24667,50.24667 0 0 1 101.29515,246.21878 Z"
+         style="opacity:1;fill:#0088aa;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter11055)"
+         transform="translate(0,-195.39999)" />
+      <g
+         id="g845">
+        <g
+           id="flowRoot11057"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.59960175px;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.98000004;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.8954525;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter11214)"
+           transform="matrix(0.60924315,0,0,0.57794657,-14.0141,-17.692047)"
+           aria-label="L">
+          <path
+             id="path861"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.59960175px;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.8954525;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 71.523203,47.075332 h 12.585508 v 82.428848 h 45.295369 v 10.59176 H 71.523203 Z" />
+        </g>
+        <g
+           id="flowRoot11222"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.59960175px;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.98000004;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.8954525;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter11214)"
+           transform="matrix(0.60924315,0,0,0.57794657,3.399821,3.7427559)"
+           aria-label="L">
+          <path
+             id="path864"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.59960175px;line-height:0.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.8954525;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 71.523203,47.075332 h 12.585508 v 82.428848 h 45.295369 v 10.59176 H 71.523203 Z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

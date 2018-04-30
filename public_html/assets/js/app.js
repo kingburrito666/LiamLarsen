@@ -1,4 +1,5 @@
-var page = 'home';
+let page = 'home';
+let homedir = '~/llarsen17';
 
 $('body').css('overflow-y', 'scroll');
 
@@ -20,22 +21,22 @@ $('.center-card .nav a').mouseleave(function() {
     }
 });
 
-var transitionTimers = [];
+let transitionTimers = [];
 
-var PAGE_FADE_TRANSITION_TIME = 250;
-var HOME_PAGE_TRANSITION_TIME = 1000;
+let PAGE_FADE_TRANSITION_TIME = 250;
+let HOME_PAGE_TRANSITION_TIME = 1000;
 
 function loadPage(nextPage) {
-    var oldPage = page;
+    let oldPage = page;
     page = nextPage;
 
-    var onMobile = $(window).width() < 786;
+    let onMobile = $(window).width() < 786;
 
     // Don't do anything if we aren't going anywhere
     if(oldPage === nextPage) return;
 
     // Stop transitions currently in progress
-    for(var i=0; i<transitionTimers.length; i++) {
+    for(let i=0; i<transitionTimers.length; i++) {
         clearTimeout(transitionTimers[i]);
     }
     transitionTimers = [];
@@ -51,8 +52,7 @@ function loadPage(nextPage) {
             // We need to use a timeout because if we add the .page class immediately
             // after making the div visible, then the browser skips the opacity fade.
             setTimeout(function() { div.addClass('show'); }, 5);
-        }
-        else {
+        } else {
             div.addClass('show');
         }
     }
@@ -103,7 +103,7 @@ function loadPage(nextPage) {
         $('.center-container').show();
         $('.center-card').removeClass('transition').addClass('return');
         $('.backgrounds').removeClass('small');
-        // $('.footer').addClass('dark');
+        $('.footer').addClass('dark');
         $('.center-card').removeClass('dark');
         $('.nav.top').addClass('hidden');
         $('.banner').addClass('hidden');
@@ -165,6 +165,7 @@ function loadPage(nextPage) {
     // If we are transitioning to some child page (not the home page), we
     // either need to load the new content or display the appropriate already-
     // loaded content
+
     if(nextPage !== 'home') {
         // If we don't have an existing .page div for this page, we need to
         // create it and load the new content
@@ -173,7 +174,7 @@ function loadPage(nextPage) {
             var newPageDiv = $('<div>', {id: nextPage+'-page', class: 'page'}).hide();
             $('#content').append(newPageDiv);
             $('#content .loading-spinner').addClass('show');
-            newPageDiv.load('/sub-index/'+nextPage+'.html', function() {
+            newPageDiv.load(homedir+'/partials/'+nextPage+'.html', function() {
                 $('#content .loading-spinner').removeClass('show');
                 // Wait until the previous page fades out (if we're on a
                 // fast connection and this page loaded before the other
@@ -193,19 +194,13 @@ function loadPage(nextPage) {
                     contentDivFadeIn(newPageDiv);
                 }, fadeDelay));
             });
-        }
-        // Otherwise, if the .page div already exists, then the content has
-        // already been loaded and we only need to display it
-        else {
+        } else {
             // If we're coming in from the home page, add the firstload class
             // so that the new content "drifts" up and in when displayed
             if(oldPage === 'home' && !onMobile) {
                 useFirstLoadAnimation();
-                // Show the page immediately (the #content div will have a
-                // transition so we don't need to fade in the .page)
                 $('#'+nextPage+'-page').show().addClass('show');
-            }
-            else {
+            } else {
                 // We want to show the new page after the old page has faded
                 // out
                 transitionTimers.push(setTimeout(function() {
@@ -216,25 +211,74 @@ function loadPage(nextPage) {
     }
 }
 
+function slideshow(classname) {
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = $('.logo .'+classname);
+        // var x = document.getElementsByClassName(".project-card .logo .slide_logo");
+        for (i = 0; i < x.length; i++) {
+            $(x[i]).fadeOut(1000);
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        //x[myIndex - 1].style.display = "block";
+        $(x[myIndex - 1]).fadeIn(300);
+        setTimeout(carousel, 3500); // ms
+    }
+}
+
 $(window).resize(function() {
     if(page !== 'home') {
         // Pages are stored in .page divs, which are absolutely positioned
         // inside of #content. Since they're absolutely positioned and take up
         // no space in the flow, when the page reflows we need to manually
         // adjust #content's height to match its visible child div
-        // $('#content').css('height', $('#'+page+'-page').height() + 'px');
+        $('#content').css('height', $('#'+page+'-page').height() + 'px');
     }
 });
 
 $('.nav-link').click(function() {
-    if(this.getAttribute('data-target') !== 'blog') {
-        loadPage(this.getAttribute('data-target'));
+    loadPage(this.getAttribute('data-target'));
 
-        // Pushstate:
-        history.pushState({}, '', $(this).attr('href'));
-        return false;
+    // Pushstate:
+    history.pushState({}, '', $(this).attr('href'));
+    return false;
+});
+
+$(window).on('popstate', function() {
+    // loadPage(location.pathname.substring(1));
+    if (location.pathname.substring(1) !== '') {
+        loadPage(location.pathname.substring(1));
+    } else {
+        loadPage('home');
     }
 });
-$(window).on('popstate', function() {
-    loadPage(location.pathname.substring(1) !== '' ? location.pathname.substring(1) : 'home');
+
+
+$(document).ready(function() {
+    if (location.pathname.substring(1) !== '' && !(page === 'home')) {
+        loadPage(location.pathname.substring(1));
+    } else {
+        loadPage('home');
+    }
+    // Preload partials
+     // for (let pageName of ['software', 'gd', 'other']) {
+     //     var newPageDiv = $('<div>', {id: pageName+'-page', class: 'page'}).hide();
+     //     $('#content').append(newPageDiv);
+     //     newPageDiv.load('partials/'+pageName+'.html');
+     // }
 });
+
+function preload(pageName) {
+    if(!$('#'+pageName+'-page').length) {
+        var newPageDiv = $('<div>', {id: pageName+'-page', class: 'page'}).hide();
+        $('#content').append(newPageDiv);
+        newPageDiv.load('partials/'+pageName+'.html');
+    }
+}
