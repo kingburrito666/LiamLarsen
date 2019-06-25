@@ -682,16 +682,16 @@ body.on-content .backgrounds {
     background: url(../img/gdbg.jpg) center center no-repeat;
 }
 
-.backgrounds #other-background {
-    background: url(../img/Placeholder.png) center center no-repeat;
+.backgrounds #stats-background {
+    background: url(../img/timelog.jpg) center center no-repeat;
 }
 
-/*.backgrounds #blog-background {*/
-/*background: url(../img/.jpg) center center no-repeat;*/
-/*}*/
-/*.backgrounds #aboutMe-background {*/
-/*background: url(../img/.jpg) center center no-repeat;*/
-/*}*/
+.backgrounds #blog-background {
+background: url(../img/.jpg) center center no-repeat;
+}
+.backgrounds #aboutMe-background {
+background: url(../img/.jpg) center center no-repeat;
+}
 
 @keyframes fade-in-up-sm {
     0% {
@@ -1252,7 +1252,15 @@ body.on-content .backgrounds {
 
 .project-card .logo img {
     width: 100%;
+    z-index: initial;
 }
+
+/*.project-card .logo img:hover {*/
+    /*-ms-transform: scale(1.5); !* IE 9 *!*/
+    /*-webkit-transform: scale(1.5); !* Safari 3-8 *!*/
+    /*transform: scale(1.5);*/
+    /*z-index: 999;*/
+/*}*/
 
 .project-card .info {
     width: 70%;

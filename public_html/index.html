@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
-
+todo: make all images, scripts local
+todo: statistics, analysis, data
 -->
-<html>
+<html lang="EN">
     <head>
         <title>Liam</title>
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -19,30 +20,28 @@
                     <a class="nav-link" data-target="home" onclick="loadPage('home')">Home</a>
                     <a class="nav-link" data-target="software">Software</a>
                     <a class="nav-link" data-target="gd">Design</a>
-                    <a class="nav-link" data-target="other">Other</a>
-                    <!--<a class="nav-link" data-target="blog" target="_blank" href="../blog/blog.html">other2</a>-->
-                    <!--<a class="nav-link" data-target="aboutMe" href="../partials/aboutMe.html">vv</a>-->
+                    <a class="nav-link" data-target="stats">Statistics</a>
+<!--                    <a class="nav-link" data-target="blog" target="_blank" href="../blog/blog.html">other2</a>-->
+                    <a class="nav-link" data-target="aboutMe">About</a> <!-- href="../partials/aboutMe.html" -->
                 </div>
-
                 <div class="banner hidden">
                     <div class="content" style='display: inline-block'>
                         <h1>
                             I like
                             <em id="software-action">programming.</em>
                             <em id="gd-action">computer graphics.</em>
-                            <em id="other-action">.......</em>
-                            <!--<em class="aboutme" id="aboutMe-action">-->
-                            <!--Website in progress-->
-                            <!--</em>-->
+                            <em id="stats-action">statistics</em>
+<!--                            todo aboutme without "i like" ...-->
+                            <em class="aboutme" id="aboutMe-action">..</em>
                           </h1>
                         <div class="desc">
-                        <p id="software-desc">C system code, to high level Javascript</p>
-                        <p id="gd-desc">Graphic Design, Web Design, etc.</p>
-                        <p id="other-desc">Other description area</p>
+                        <p id="software-desc">C system code, to high level backend web</p>
+                        <p id="gd-desc">Graphic Design, Web Design, 3D Modeling, etc.</p>
+                        <p id="stats-desc">Statistics and data analysis</p>
+                        <p id="aboutMe-desc">What </p>
                         </div>
                     </div>
                 </div>
-
                 <div id="content">
                     <div class="loading-spinner"></div>
                 </div>
@@ -51,22 +50,20 @@
             </div><!-- .wrapper -->
         </div> <!-- .content-container -->
         <div class="home-page-container">
-
             <div class="wrapper">
-
                 <div class="center-container">
-
                     <div class="center-card">
+<!--                        Todo new body logo center card image-->
                         <img class="center-card-image" src="./assets/img/body_logo.svg" alt="image" style="width:350px;height:400px;">
                         <h1 class="title-text"><em>Hi. </em>I'm Liam</h1>
                         <div class ="AbtM">
-                            student <em>programmer</em> from Los Angeles.
+                            student <em>programmer</em> and <em>designer</em> from Los Angeles.
                         </div>
                         <div class="nav in-body">
                             <a class="nav-link" onmouseover="preload('software')" data-target="software">Software</a>
                             <a class="nav-link" onmouseover="preload('gd')" data-target="gd">Design</a>
-                            <a class="nav-link" onmouseover="preload('other')" data-target="other">Other</a>
-                            <!-- <a class="nav-link" data-target="aboutMe" href="./partials/aboutMe.html">stuff</a> -->
+                            <a class="nav-link" onmouseover="preload('stats')" data-target="stats">Statistics</a>
+                            <a class="nav-link" onmouseover="preload('aboutme')" data-target="aboutMe">About</a> <!-- href="./partials/aboutMe.html" -->
                         </div>
                     </div>
                 </div><!-- .content-container -->
@@ -82,9 +79,9 @@
             <div class="gray-overlay"></div>
             <div id="software-background"></div>
             <div id="gd-background"></div>
-            <div id="other-background"></div>
-            <!--<div id="blog-background"></div>-->
-            <!--<div id="aboutMe-background"></div>-->
+            <div id="stats-background"></div>
+            <div id="blog-background"></div>
+            <div id="aboutMe-background"></div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="assets/js/app.js"></script>

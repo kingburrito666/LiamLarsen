@@ -1,5 +1,4 @@
 let page = 'home';
-let homedir = '~/llarsen17';
 
 $('body').css('overflow-y', 'scroll');
 
@@ -134,7 +133,7 @@ function loadPage(nextPage) {
         $('.banner .content #'+page+'-action').css('display', 'inline-block');
     } else if(nextPage !== 'home') {
         if(!onMobile) {
-            // We need to make the old text "flip" out and the new text flip in
+            // old text "flip" out and the new text flip in
             $('.banner .content #'+oldPage+'-action').addClass('exiting');
             $('.banner .content #'+nextPage+'-action').addClass('entering');
             transitionTimers.push(setTimeout(function(){
@@ -151,7 +150,7 @@ function loadPage(nextPage) {
         }
     }
 
-    // We're going to another page, so we hide the current one
+    // hide the current page
     $('#'+oldPage+'-page').removeClass('show');
     if(!onMobile) {
         // Remove the page from the flow once it transitions out
